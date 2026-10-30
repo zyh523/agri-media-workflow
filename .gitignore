@@ -1,0 +1,22 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+Thumbs.db
+
+# Real account data and credentials belong outside this reusable skill.
+account.json
+run.json
+publish-ledger.jsonl
+metrics.jsonl
+approval.json
+runs/
+content/
+reviews/
+credentials/
+secrets/
