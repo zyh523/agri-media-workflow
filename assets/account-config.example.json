@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "config_version": 1,
+  "timezone": "Asia/Shanghai",
+  "accounts": [
+    {"platform": "douyin", "account_id": null, "display_name": null, "connector_ref": null},
+    {"platform": "xiaohongshu", "account_id": null, "display_name": null, "connector_ref": null}
+  ],
+  "positioning": {
+    "primary_pillar": null,
+    "audience": null,
+    "region": null,
+    "growing_environment": null,
+    "identity_statement": null,
+    "identity_evidence": [],
+    "content_promise": null,
+    "forbidden_claims": ["虚构农场或专家身份", "保证收益", "未核验用药方案"],
+    "available_real_assets": [],
+    "commercial_scope": null
+  },
+  "objectives": {"primary_metric": null, "guardrails": ["事实错误", "负反馈", "制作成本"], "baseline_period": null},
+  "permissions": {
+    "publish_mode": "human_review_per_item",
+    "approval_required_per_platform": true,
+    "approval_valid_hours": 24,
+    "max_posts_per_platform_per_day": 1,
+    "allowed_accounts_confirmed": false,
+    "read_comments": false,
+    "send_comments": false,
+    "send_private_messages": false,
+    "attach_products": false,
+    "buy_ads": false,
+    "edit_profile": false,
+    "edit_or_delete_published_posts": false
+  },
+  "budgets": {"currency": "CNY", "max_per_item": 0, "max_per_day": 0, "paid_tools_authorized": false},
+  "production": {"default_aspect_ratio": "9:16", "available_tools": [], "voice_authorizations": [], "expert_reviewer": null},
+  "measurement": {"windows_hours": [24, 72, 168], "forecast_min_samples": 10, "lookback_days": 60},
+  "schedule": {"publishing_slots": [], "scheduler_ref": null},
+  "policy_checks": [],
+  "notes": "这是未配置模板，不是任何真实账号的有效授权；先填定位及账号，逐条审核最终版本后才可发布。"
+}
