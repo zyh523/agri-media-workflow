@@ -1,0 +1,23 @@
+name: Offline checks
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  forecast:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run offline checks
+        run: python -X utf8 scripts/check_forecast.py
+      - name: Verify documented synthetic output
+        run: |
+          python -X utf8 scripts/forecast.py --history assets/synthetic-history.jsonl --target assets/synthetic-target.json --output /tmp/forecast.json
+          python -X utf8 -c "import json; from pathlib import Path; assert json.loads(Path('/tmp/forecast.json').read_text()) == json.loads(Path('assets/synthetic-forecast.expected.json').read_text())"
