@@ -1,0 +1,4 @@
+interface:
+  display_name: "泛农业自媒体一体化创作"
+  short_description: "贯通农业账号选题、核验、文稿分镜、发布、流量估计与复盘的自主运营工作流"
+  default_prompt: "使用 $agri-media-workflow，为我的农业账号完成本轮选题到发布复盘的工作，先读取账号配置并检查可用数据。"
